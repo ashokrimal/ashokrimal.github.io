@@ -4,67 +4,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ashok.rimal</title>
-    <!-- Css linking -->
+    <title>ashok rimal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
-
 <body>
-    <div class="upper-body" id="home">
-        <!-- heading starts -->
-        <header>
-            <!-- navigation inside header -->
-            <nav>
-                <div class="nav">
-                    <div class="heading">
-                        <h1>Ashok <span>Rimal</span></h1>
-                    </div>
-                    <div class="nav-items">
-                        <!-- <nav> -->
-                        <a href="#home">Home</a>
-                        <a href="#about">About-Me</a>
-                        <a href="#skill">Skills</a>
-                        <a href="#contact">Contact</a>
-                        <!-- </nav> -->
-                    </div>
-                </div>
-            </nav>
-            <!-- navigation ends -->
-        </header>
-        <!-- header ends -->
+  
+    <header>
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+            <div class="search-box">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Search...." class="search-input">
+                
+            </div>
+        </nav>   
 
+        
+
+        <div class="logo">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+           
+        </button>
+
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </span>
+
+        <!----LOGIN -->
+
+        <div class="form-box login" login>
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? 
+                        <a href="#" class="login-link">SignUp</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+
+<!----Signup---->
+
+        <div class="form-box register" register>
+            <h2>Create an account</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+            <span class="icon">
+                <ion-icon name="mail-outline"></ion-icon>
+            </span>
+            <input type="email" required>
+            <label>Email</label>
+        </div>
+        <div class="input-box">
+            <span class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+            </span>
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox"> I agree to the terms & conditions</label>
+        
+        </div>
+        <button type="submit" class="btn">SignUp</button>
+        <div class="login-register">
+            <p>Already have an account? 
+                <a href="#" class="register-link">Signin</a>
+            </p>
+        </div>
+    </form>
+</div>
+
+    </div>
+
+    <div class="upper-body" id="home">
+
+        
+
+       
         <!-- main part starts -->
+
         <main>
             <div class="img">
-                <img src="https://scontent.fktm16-1.fna.fbcdn.net/v/t39.30808-6/314724218_1443059336226968_3437489707846915251_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ofPz-1CyRd8AX9Za186&_nc_ht=scontent.fktm16-1.fna&oh=00_AfBVwUA50bTkbL5VDfYg_TTWlEIUgicyrcvfFjNrgnjmqw&oe=63D4BE42 " alt="">
+                <img src=" https://scontent.fktm16-1.fna.fbcdn.net/v/t39.30808-1/314724218_1443059336226968_3437489707846915251_n.jpg?stp=dst-jpg_p160x160&_nc_cat=101&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=7ubbroxGm3cAX8SbMgd&_nc_ht=scontent.fktm16-1.fna&oh=00_AfBgMGshLipc7AWtoKn32mccb7BTE3Uw_8Z8NPW9MUBGgw&oe=63DD5A04  "  alt="profile">
             </div>
             <div class="text">
-                <p>Hello Visitor.</p>
+                <p>Hello there! </p>
             </div>
             <div class="heading">
                 <h1>
                     I'm Ashok Rimal.
                 </h1>
             </div>
-            <div class="content">
-                
-            </div>
-        </main>
-    </div>
+            </main>
+
+    <!--mid part starts-->
+
     <div class="mid">
         <div id="about" class="about">
             <div class="heading">
                 <h1>About-Me</h1>
             </div>
             <div class="mid-cnt">
-                <img class="abt-img" src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis voluptates itaque obcaecati
-                    illum ab iure vel explicabo, at, suscipit quos quod cumque quibusdam molestias? Tempore aliquam fuga
-                    aliquid nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente error quod in quam.
-                    Laboriosam placeat eaque quas sequi explicabo eligendi ratione nisi repellat! Expedita nobis atque
-                    ratione eveniet, blanditiis modi? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Exercitationem commodi, cumque atque unde, aspernatur, alias minus voluptatibus veniam voluptatum
-                    iusto esse vero eius eveniet hic ipsum! Rem quas earum voluptatibus?</p>
+
+                <p>
+                    Hi i am ashok rimal.
+                </p>
             </div>
 
             <div class="table">
@@ -83,7 +166,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <span> Email:</span>info.ashokrimal@gmail.com
+                            <span> Email:</span>contact@ashokrimal.com
                         </td>
                         <td>
                             <label for="file">CSS:</label>
@@ -94,12 +177,10 @@
                         <td>
                             <span>Phone:</span> 9867597146
                         </td>
-                        <td>
-                            <label for="file">BOOTSTRAP:</label>
-                            <progress id="file" value="0" max="100"> 62% </progress>
-                        </td>
-                    </tr>
-                    <tr>
+                       </tr>
+
+                       <tr>
+
 
                         <td>
                             <span>Address:</span> Butwal-11
@@ -127,52 +208,56 @@
                     </tr>
                 </table>
             </div>
-            
-    <div id="skill" class="skill">
-        <div class="heading">
-            <h1>My works</h1>
-        </div>
 
-    <div class="last">
-        <div id="contact" class="contact">
-            <div class="heading">
-                <h1>Need any help ?</h1>
-            </div>
-            <div class="text">
-                CONTACT US
-            </div>
-            <form class="form">
-                <input class="up" type="text" placeholder="Username">
-                <input class="up" type="email" placeholder="Your Email">
-                <br>
-                <input class="down" type="text" placeholder="Subject">
-                <br>
-                <input class="down" type="text" placeholder="Enter your message here...">
-                <br>
+            <div id="service" class="service">
+                <div class="heading">
+                    <h1>My works</h1>
+                </div>
 
-            </form>
-            <div class="btn">
-                <a href="">Send</a>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer">
-            <div class="logo">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>&nbsp;&nbsp;
-    <a href="#"><i class="fa-brands fa-youtube"></i></a>&nbsp;&nbsp;
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp;&nbsp;
-    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;&nbsp;
-    <a href="#"><i class="fa-brands fa-github"></i></a>
-</div>
-            <div class="content">
-                <h5>Privacy | Terms | FAQs | Help</h5>
-            </div>
-            <div class="text">
-                <h4>© (Ashok Rimal). All Rights Reserved. Designed by (Ashok Rimal)</h4>
-            </div>
-        </div>
-    </footer>
+                <div class="last">
+                    <div id="contact" class="contact">
+                        <div class="heading">
+                            <h1>Need any help ?</h1>
+                        </div>
+                        <div class="text">
+                            CONTACT US
+                        </div>
+                        <form class="form">
+                            <input class="up" type="text" placeholder="Username">
+                            <input class="up" type="email" placeholder="Your Email">
+                            <br>
+                            <input class="down" type="text" placeholder="Subject">
+                            <br>
+                            <input class="down" type="text" placeholder="Enter your message here...">
+                            <br>
+
+                        </form>
+                        <div class="btn">
+                            <a href="">Send</a>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer">
+                        <div class="logo">
+                            
+                            <a target="_blank" href="https://www.facebook.com/ashokrimalofficial0"> <i class="fa-brands fa-facebook"></i> </a>
+                            <a href="https://www.instagram.com/ashokrimal_official"> <i class="fa-brands fa-instagram"></i> </a>
+                            <a href="https://www."></a>
+                        </div>
+                        <br><br>`-
+
+                        <div class="content">
+                            <h5>Privacy | Terms | FAQs | Help</h5>
+                        </div>
+                        <div class="text">
+                            <h4>© (Ashok Rimal). All Rights Reserved. Designed by (Ashok Rimal)</h4>
+                        </div>
+                    </div>
+                </footer>
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>

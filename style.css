@@ -1,62 +1,320 @@
-/* making variables */
-:root{
-    --base:#003A6C;
-    --primary:#89CFF0;
-    --secondary:#B0E0E6;
-    --dark:#000;
-    --light:#fff;
-    --light2:#FFF1D0;
-}
 /* universal declaration */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: skyblue;
+    background-position: center;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: -20;
+    width: 100%;
+    padding: 20px 100px;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+
+
+/* navigation */
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    display: fixed;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 30;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform  .5s;
+}
+
+.navigation a:hover: :after {
+    transform-origin:   left;
+    transform: scaleX(1);
+}
+
+/* Search */
+
+/*..Search box Style.. */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    height: 2px;
+    width: 10;
+}
+
+/* Style for Search icon */
+
+.search-icon {
+    margin-right: 10px;
+    color: #ccc;
+}
+
+/* Style for Search Input field */
+
+.search-input {
+    flex: 100;
+    border: none;
+    font-size: 16px;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+
+/* Search button style */
+
+.search-button {
+    margin-left: 1px;
+    padding: 1px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: right;
+}
+
+/* Hover Effect for search button */
+
+.search-button:hover {
+    background-color: #3e8341;
+}
+
+/* Login LOGO */
+
+
+
+
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transform: scale(0);
+   transition: transform .5s ease height .2s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+  transition: transform .18s ease;
+  transform: translateX(0);
+
+
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 22px;
+    cursor: pointer;
+}
+
+/* login text style */
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+
+
+.input-box  .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background-color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #e4ebf0;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 50;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+
+}
+
+
+
 .upper-body{
     background-color: var(--base);
     height: 100vh;
     margin-top: 0%;
     padding-top: 0%;
 }
-/* header part starts */
-/* all the parent divs to make a proper 2% margin and padding  */
-header , .about , .table , .btn , .card , .contact, .footer{
-    margin: 2%;
-    padding: 2%;
-    position: sticky;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/* heading style */
-.heading{
-    font-size: 2rem;
-    font-weight: 900;
-    color:var(--light) ;
-}
-span{
-    color: var(--primary);
-}
-.nav-items{
-    width: 40%;
-    overflow: hidden;
-}
-.nav-items>a{
-    padding: 3%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 900;
-    color:var(--light) ;
-}
-.nav-items>a:hover{
-    color: var(--primary);
-}
-/* navigation ends */
 
 /* main starts */
 .img , .text, .content, .heading{
@@ -74,6 +332,7 @@ img{
 .text ,.content{
     font-size: 2.3rem;
     color: var(--light2);
+    display: flex;
 }
 /* main ends */
 
@@ -81,6 +340,7 @@ img{
 .mid{
     background-color: var(--primary);
     padding: 3rem 0;
+    display: flex;
 }
 .mid-cnt{
     display: flex;
@@ -96,6 +356,10 @@ img{
 .abt-img{
     height: 13rem;
     width: 13rem;
+}
+
+.table {
+    content: space-between;
 }
 
 table, .btn{
@@ -118,6 +382,7 @@ table span{
 }
 .btn>a{
     border: 1px solid var(--dark);
+    border-radius: 25 25;
     padding: 1rem 2rem;
     text-decoration: none;
     color: var(--base);
@@ -200,11 +465,31 @@ textarea{
 }
 footer{
     background-color:var(--dark);
+    width: 100%;
 }
 .logo{
-    margin: 0 680px;
+    margin-left: 450px;
+    position: absolute;
+    text-align: center;
+
 }
 .logos{
     height: 5rem;
     width: 5rem;
+}
+.logo a i{
+    font-size: 24px;
+    color: white;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #003A6C;
+    padding: 12px 0px;
+    border: 1px solid #fff;
+   
+
+}
+.content h5 .text h4{
+    font-size: 12px;
 }
